@@ -19,3 +19,469 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #8A9AE1; /* Initial background color */
+    font-family: 'Noto Sans Armenian', sans-serif; /* Modern font */
+    transition: background-color 2s; /* Transition for background color */
+    font-size: 14px; /* Base font size */
+}
+
+body.show-content {
+    background-color: white; /* Change background color to white */
+    background-image: url('/background_header.jpeg'); /* Path to your background image */
+    background-size: cover; /* Ensure the background image covers the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
+
+.logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 2s, top 2s, left 2s, width 2s, height 2s;
+    text-align: center;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+.logo {
+    width: 250px; /* Initial size */
+    height: 250px;
+    transition: width 2s, height 2s;
+}
+
+/* General content styling */
+.content {
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.header_imun {
+    text-align: left;
+    margin-left: 100px;
+}
+
+.header_imun h1 {
+    font-size: 24px; /* Adjust the font size as needed */
+    color: white; /* Adjust the text color as needed */
+}
+
+.content-section {
+    display: none;
+    opacity: 0;
+    transition: opacity 2s;
+    padding: 15px;
+    text-align: center;
+}
+
+/* About section styling */
+.about-section {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border: 1px solid #ccc; /* Border around the section */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column; /* Column layout for mobile */
+}
+
+.about-section {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border: 1px solid #ccc; /* Border around the section */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column; /* Column layout for mobile */
+}
+
+/* Heading and paragraph styles */
+.about-text h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #2C3E50; /* Dark blue color */
+}
+
+.about-text h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #2980B9; /* Lighter blue color */
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: #34495E; /* Darker gray color */
+}
+
+/* Custom list markers */
+.about-text ul {
+    list-style: none; /* Remove default list style */
+    margin: 0;
+    padding: 0 20px;
+}
+
+.about-text ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px; /* Space for custom marker */
+    color: #34495E; /* Darker gray color */
+}
+
+.about-text ul li::before {
+    content: '•'; /* Custom marker */
+    color: #E74C3C; /* Red color for marker */
+    font-size: 24px; /* Adjust marker size */
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 1; /* Align marker vertically */
+}
+
+/* Carousel styling */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+    min-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.carousel-thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carousel-thumbnail {
+    width: 80px;
+    height: 50px;
+    margin: 0 10px;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    border-radius: 10px; /* Rounded corners for thumbnails */
+}
+
+.carousel-thumbnail:hover {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .about-section {
+        flex-direction: column; /* Column layout for mobile */
+        padding: 10px;
+    }
+
+    .about-table td {
+        font-size: 12px; /* Smaller font size for mobile */
+    }
+
+    .carousel-thumbnail {
+        width: 60px;
+        height: 40px;
+        margin: 0 5px;
+    }
+
+    .header_imun {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .header_imun h1 {
+        margin-left: 18%;
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    .mobile-newline {
+        display: block;
+    }
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #8A9AE1; /* Initial background color */
+        font-family: 'Noto Sans Armenian', sans-serif; /* Modern font */
+        transition: background-color 2s; /* Transition for background color */
+        font-size: 11px; /* Base font size */
+    }
+}
+
+@media (min-width: 601px) {
+    .about-section {
+        flex-direction: row; /* Row layout for desktop */
+        align-items: flex-start; /* Align items to start */
+    }
+
+    .carousel {
+        flex: 1; /* Take up equal space */
+        margin-right: 20px; /* Space between carousel and text */
+    }
+
+    .about-text {
+        flex: 1; /* Take up equal space */
+    }
+
+    .mobile-newline {
+        display: inline; /* Keep inline for desktop */
+    }
+}
+
+body.transitioned .logo-container {
+    top: 10px;
+    left: 10px;
+    transform: translate(0, 0);
+}
+
+body.transitioned .logo {
+    width: 100px; /* Smaller size for mobile */
+    height: 100px;
+}
+
+@media (min-width: 900px) {
+    .logo {
+        width: 250px; /* Larger size for large screens */
+        height: 250px;
+    }
+}
+
+/* Footer styles */
+.footer {
+    background-color: white; /* Background color */
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px; /* Base font size */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 2s; /* Transition for visibility */
+}
+
+.footer.show {
+    opacity: 1; /* Show footer */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro-text p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons p {
+    margin: 10px 0; /* Space between text lines */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap the content if it doesn't fit in one line */
+}
+
+.social-icons a,
+.social-icons img {
+    margin: 0 5px; /* Space between icons and text */
+}
+
+.social-icons img {
+    width: 24px; /* Icon size */
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.footer-text {
+    margin: 5px 0; /* Space between text lines */
+    font-size: 12px; /* Smaller font size for footer text */
+}
+
+.additional-text {
+    margin-top: 10px; /* Space above additional text */
+    font-size: 12px; /* Font size */
+    color: black; /* Text color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .footer-content {
+        align-items: center;
+    }
+
+    .intro-text p {
+        font-size: 12px; /* Smaller font size for mobile */
+        margin: 10px 0; /* Add some margin for better spacing */
+    }
+
+    .social-icons p {
+        flex-direction: row; /* Ensure items are in a row */
+        justify-content: center; /* Center items */
+        flex-wrap: nowrap; /* Prevent wrapping */
+    }
+
+    .social-icons img {
+        width: 20px; /* Smaller icon size */
+        height: 20px;
+    }
+
+    .footer-text, .additional-text {
+        font-size: 10px; /* Smaller font size for footer text on mobile */
+    }
+
+    .header_imun {
+        margin: 15px;
+        font-size: 14px;
+    }
+}
+
+/* Donate section styling */
+.donate-section {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border: 1px solid #ccc; /* Border around the section */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.donate-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #2C3E50; /* Dark blue color */
+}
+
+.donation-form {
+    margin-top: 20px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.donation-form h3 {
+    margin-bottom: 20px;
+    color: #2C3E50;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2C3E50; /* Dark blue color */
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.amount-currency-group-2 {
+    display: flex;
+    gap: 10px; /* Space between select and input */
+    align-items: center;
+}
+
+.amount-currency-group-2 select {
+    width: 6%;
+    flex: 0 0 auto;
+    margin-top: 5px;
+    margin-bottom: 10px; /* Prevent the select from stretching */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.amount-currency-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    background-color: #3498DB; /* Blue color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #2980B9; /* Darker blue on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .amount-currency-group {
+        flex-direction: column;
+    }
+
+    .amount-currency-group select,
+    .amount-currency-group input {
+        width: 100%;
+        margin-top: 10px; /* Space between select and input on mobile */
+    }
+
+    .amount-currency-group-2 select {
+        width: 28%;
+    }
+}
