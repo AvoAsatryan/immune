@@ -1,10 +1,8 @@
 "use client";
-import Image from "next/image";
-import { Input } from "@/components/ui/input";
 import Footer from "@/components/footer/Footer";
 import Donate from "@/components/donate/Donate";
 import CarouselImmune from "@/components/carousel/CarouselImmune";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 export default function Home() {
 

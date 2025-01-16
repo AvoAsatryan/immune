@@ -27,7 +27,7 @@ const CheckoutPage = ({ amount, currency }: { amount: number, currency: Currency
     })
       .then((res) => res.json())
       .then((data) => setClientSecret(data.clientSecret));
-  }, [amount]);
+  }, [amount, currency.value]);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

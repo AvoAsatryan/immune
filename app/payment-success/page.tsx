@@ -7,11 +7,11 @@ const currency_sign_mapping: Record<string, string> = {
   "rub": "₽",
 }
 
-export default function PaymentSuccess({
-  searchParams: { amount, currency },
-}: {
-  searchParams: { amount: string, currency: string };
-}) {
+export default async function PaymentSuccess({ searchParams }: { searchParams? : Promise<any> }) {
+  const resolvedSearchParams = await searchParams;
+  const amount = resolvedSearchParams?.amount || "0"; // Fallback in case amount is not provided
+  const currency = resolvedSearchParams?.currency || "usd"; // Fallback to USD if no currency
+
   return (
     <div className="bg-gray-100 h-screen">
       <div className="bg-white p-6  md:mx-auto">

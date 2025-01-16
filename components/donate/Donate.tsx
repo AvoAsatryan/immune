@@ -30,8 +30,6 @@ if (process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY === undefined) {
 }
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
 
-type Props = {};
-
 const currencies: Currency[] = [
   {
     value: "usd",
@@ -55,7 +53,7 @@ const currencies: Currency[] = [
   },
 ];
 
-const Donate = (props: Props) => {
+const Donate = () => {
   const [donationToggleState, setDonationToggleState] = useState(false);
   const [donationAmount, setDonationAmount] = useState<number>(0);
   const [open, setOpen] = React.useState(false);
@@ -76,7 +74,7 @@ const Donate = (props: Props) => {
           value={donationAmount}
           type="number"
           placeholder="Amount"
-          onChange={(e) => setDonationAmount(Number(e.target.value))}
+          onChange={(e) => {setDonationAmount(Number(e.target.value))}}
         />
 
         <Popover open={open} onOpenChange={setOpen}>
@@ -112,6 +110,7 @@ const Donate = (props: Props) => {
                           ) || null
                         );
                         setOpen(false);
+                        //setDonationToggleState(false);
                       }}
                     >
                       {currency.label}
